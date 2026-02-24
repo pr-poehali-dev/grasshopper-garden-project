@@ -155,22 +155,29 @@ export default function Index() {
         className="relative z-10 flex h-screen w-full overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory hide-scrollbar"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        <section id="home" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
-          <div className="mx-auto max-w-4xl">
+        <section id="home" className="flex min-w-full snap-start items-center justify-center px-4 py-20 relative">
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <img
+              src="https://cdn.poehali.dev/projects/dc22665f-4cb3-439e-a306-99d2a377a17c/files/1c7c1cc0-727d-4620-b781-a788eb3e345c.jpg"
+              alt="Теплоход на реке Кубань"
+              className="w-full h-full object-cover opacity-20"
+            />
+          </div>
+          <div className="mx-auto max-w-4xl relative z-10">
             <div className="text-center px-0 leading-5">
               <h1 className="mb-8 text-balance text-5xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
-                <span className="font-open-sans-custom not-italic">Идея.</span>{" "}
-                <span className="font-serif italic">Промпт.</span>{" "}
-                <span className="font-open-sans-custom not-italic">Результат.</span>
+                <span className="font-open-sans-custom not-italic">Река.</span>{" "}
+                <span className="font-serif italic">Простор.</span>{" "}
+                <span className="font-open-sans-custom not-italic">Впечатления.</span>
               </h1>
 
               <p className="mb-8 mx-auto max-w-2xl text-pretty leading-relaxed text-gray-300 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-thin font-open-sans-custom tracking-wide leading-7 text-xl">
-                дизайнер, разработчик или просто любопытный — возьми идею,{" "}
-                <span className="font-serif italic">опиши</span> её и наблюдай, как она оживает
+                речные прогулки на теплоходе по Кубани — свадьбы, корпоративы и деловые встречи с{" "}
+                <span className="font-serif italic">панорамными видами</span> на Краснодар
               </p>
 
               <div className="flex justify-center">
-                <ShinyButton className="px-8 py-3 text-base">начать</ShinyButton>
+                <ShinyButton className="px-8 py-3 text-base">забронировать</ShinyButton>
               </div>
             </div>
           </div>
@@ -201,11 +208,10 @@ export default function Index() {
           <div className="relative z-10 mx-auto w-full max-w-5xl">
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
-                Тарифы и цены
+                Аренда теплохода
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Выберите подходящий план. От индивидуальных авторов до корпоративных команд — гибкие
-                тарифы для вашего успеха.
+                Выберите формат под ваше мероприятие — от романтической прогулки вдвоём до масштабного корпоратива на борту.
               </p>
             </div>
             <BentoPricing />
@@ -231,10 +237,10 @@ export default function Index() {
           <div className="relative z-10 mx-auto w-full max-w-7xl">
             <div className="mx-auto mb-10 max-w-2xl text-center">
               <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
-                О нас
+                Наша история
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Узнайте больше о нашей миссии, видении и ценностях, которые движут нами.
+                Мы создаём незабываемые моменты на воде — с заботой о каждом госте.
               </p>
             </div>
             <AboutQuote />
@@ -258,23 +264,23 @@ export default function Index() {
 
           <div className="relative z-10 mx-auto w-full max-w-5xl mt-[5vh]">
             <ContactCard
-              title="Свяжитесь с нами"
-              description="Если у вас есть вопросы о наших услугах или нужна помощь, заполните форму. Мы стараемся отвечать в течение 1 рабочего дня."
+              title="Забронировать прогулку"
+              description="Оставьте заявку — мы свяжемся с вами в течение часа и подберём удобное время для выхода на воду."
               contactInfo={[
                 {
                   icon: MailIcon,
                   label: "Почта",
-                  value: "hello@promptcraft.dev",
+                  value: "info@kuban-cruise.ru",
                 },
                 {
                   icon: PhoneIcon,
                   label: "Телефон",
-                  value: "+7 (495) 123-45-67",
+                  value: "+7 (861) 000-00-00",
                 },
                 {
                   icon: MapPinIcon,
-                  label: "Адрес",
-                  value: "Москва, Россия",
+                  label: "Причал",
+                  value: "Краснодар, набережная Кубани",
                   className: "col-span-2",
                 },
               ]}
